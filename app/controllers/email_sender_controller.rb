@@ -9,7 +9,7 @@ class EmailSenderController < ApplicationController
           "to": [params[:to]],
           "subject": params[:subject],
           "html": params[:bodyhtml],
-          "business_name": params[:business_name]
+          "business_name": @current_user.business_name
         }
     
         sent = Resend::Emails.send(email_params)
@@ -32,7 +32,7 @@ class EmailSenderController < ApplicationController
           subject: params[:subject],
           bodyhtml: params[:html],
           sent_at: Time.now,
-          business_name: params[:business_name],
+          business_name: @current_user.business_name,
           enviado: enviado
         )
       end
