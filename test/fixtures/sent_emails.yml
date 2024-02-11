@@ -1,0 +1,28 @@
+# == Schema Information
+#
+# Table name: sent_emails
+#
+#  id            :bigint           not null, primary key
+#  from          :string
+#  to            :text
+#  subject       :string
+#  bodyhtml      :text
+#  sent_at       :datetime
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  business_name :string           not null
+#
+
+one:
+  from: MyString
+  to: MyText
+  subject: MyString
+  bodyhtml: MyText
+  sent_at: 2024-02-10 14:10:34
+
+two:
+  from: MyString
+  to: MyText
+  subject: MyString
+  bodyhtml: MyText
+  sent_at: 2024-02-10 14:10:34
